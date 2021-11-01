@@ -1,0 +1,10 @@
+{
+  "name": "style-chrome",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  },
+  "scripts": {
+    "watch": "sass --watch src:output"
+  }
+}

@@ -1,0 +1,47 @@
+$fontMap: (
+  P: (
+    Meiryo,
+    Meiryo UI,
+    メイリオ,
+    Noto Sans,
+    Noto Sans JP,
+    Noto Sans Japanese,
+    ＭＳ Ｐゴシック,
+    YuGothic,
+    Yu Gothic,
+    游ゴシック,
+    Work Sans,
+    Roboto,
+    Segoe UI,
+    BIZ UDPGothic,
+    BIZ UDPゴシック,
+    Open Sans,
+  ),
+  Monospace: (
+    ＭＳ ゴシック,
+  ),
+);
+
+$fontWeights: (
+  100: ExtraLight,
+  200: Light,
+  300: Normal,
+  400: Regular,
+  500: Medium,
+  600: Medium,
+  700: Bold,
+  800: Heavy,
+  900: Heavy,
+);
+
+@each $name, $fonts in $fontMap {
+  @each $font in $fonts {
+    @each $weightValue, $weightName in $fontWeights {
+      @font-face {
+        font-family: "#{$font}";
+        font-weight: #{$weightValue};
+        src: local("Gen Shin Gothic #{$name} Unhinted #{$weightName}");
+      }
+    }
+  }
+}
