@@ -1,3 +1,4 @@
+/* cSpell:disable */
 $fontMap: (
   P: (
     Meiryo,
@@ -14,6 +15,7 @@ $fontMap: (
     noto-sans-cjk-jp,
     ＭＳ Ｐゴシック,
     MS PGothic,
+    MS UI Gothic,
     YuGothic,
     Yu Gothic,
     Yu Gothic Medium,
@@ -22,8 +24,11 @@ $fontMap: (
     Hiragino Kaku Gothic,
     Hiragino Kaku Gothic Pro,
     Hiragino Kaku Gothic ProN,
+    Hiragino Kaku Gothic W3 JIS2004,
+    Hiragino UD Sans W3 JIS2004,
     ヒラギノ角ゴ W3 JIS2004,
     ヒラギノ角ゴ W8 JIS2004,
+    UD新ゴ コンデンス90 L,
     BIZ UDPGothic,
     BIZ UDPゴシック,
     新ゴ L,
@@ -63,6 +68,7 @@ $fontMap: (
     Chirp,
     Montserrat,
     Gothic MB101 Light,
+    Gothic MB101 Medium,
     TsukuGoPr5-M,
     tsukushigothic,
     herozLight,
@@ -76,10 +82,12 @@ $fontMap: (
   Monospace: (
     ＭＳ ゴシック,
     MS Gothic,
+    Hack,
     Courier,
     Courier New,
     Roboto Mono,
     Consolas,
+    Ubuntu Mono,
     monospace,
   ),
 );
@@ -100,9 +108,9 @@ $fontWeights: (
   @each $font in $fonts {
     @each $weightValue, $weightName in $fontWeights {
       @font-face {
-        font-family: "#{$font}";
+        font-family: '#{$font}';
         font-weight: #{$weightValue};
-        src: local("Gen Shin Gothic #{$name} Unhinted #{$weightName}");
+        src: local('Gen Shin Gothic #{$name} Unhinted #{$weightName}');
       }
     }
   }
